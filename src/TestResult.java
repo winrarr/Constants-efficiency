@@ -20,7 +20,7 @@ public class TestResult {
     public void showResult() {
         StringBuilder print = new StringBuilder(testName + ":");
         addSpacesToNthCharacter(print, 8);
-        print.append("[ RAM: ").append(ram);
+        print.append("[ RAM: ").append(ram / (1024 * 1024)).append(" mb");
         addSpacesToNthCharacter(print, 28);
         System.out.println(print + "-    Time: " + time + " ms ]");
     }

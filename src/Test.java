@@ -34,11 +34,12 @@ public class Test {
 
         for (int i = 0; i < n; i++) {
             Item[] items = Item.values();
-            Item item = items[new Random().nextInt(items.length)];
+            int index = new Random().nextInt(items.length);
             List<ItemConstant> itemList = new ArrayList<>();
 
             start = System.currentTimeMillis();
 
+            Item item = items[index];
             int a = item.getWeight();
             boolean b = item.isDroppable();
             boolean c = item.isUsedForCrafting();
@@ -72,11 +73,12 @@ public class Test {
 
         for (int i = 0; i < n; i++) {
             Item[] items = Item.values();
-            String item = items[new Random().nextInt(items.length)].toString().toLowerCase();
+            String itemName = items[new Random().nextInt(items.length)].toString().toLowerCase();
             List<ItemConstant> itemList = new ArrayList<>();
 
             start = System.currentTimeMillis();
 
+            String item = itemName;
             int a = attributes.get(item).getWeight();
             boolean b = attributes.get(item).isDroppable();
             boolean c = attributes.get(item).isUsedForCrafting();
