@@ -10,7 +10,6 @@ public class EnumTest extends AbstractTest {
         long time = 0;
 
         Random rand = new Random();
-        Item[] items = Item.values();
         for (int i = 0; i < numerOfObjects; i++) {
             Item itemEnum = items[rand.nextInt(items.length)];
             List<ItemConstant> itemList = new ArrayList<>();
