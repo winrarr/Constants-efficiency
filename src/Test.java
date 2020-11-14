@@ -33,13 +33,14 @@ public class Test {
     private TestResult testEnum() {
         long time = 0;
 
+        Random rand = new Random();
         for (int i = 0; i < n; i++) {
-            int index = new Random().nextInt(items.length);
+            Item itemEnum = items[rand.nextInt(items.length)];
             List<ItemConstant> itemList = new ArrayList<>();
 
             start = System.currentTimeMillis();
 
-            Item item = items[index];
+            Item item = itemEnum;
             int a = item.getWeight();
             boolean b = item.isDroppable();
             boolean c = item.isUsedForCrafting();
@@ -71,8 +72,9 @@ public class Test {
 
         time += end - start;
 
+        Random rand = new Random();
         for (int i = 0; i < n; i++) {
-            String itemName = items[new Random().nextInt(items.length)].toString().toLowerCase();
+            String itemName = items[rand.nextInt(items.length)].toString().toLowerCase();
             List<ItemConstant> itemList = new ArrayList<>();
 
             start = System.currentTimeMillis();
