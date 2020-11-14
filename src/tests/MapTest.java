@@ -4,7 +4,7 @@ import java.util.*;
 
 public class MapTest extends AbstractTest {
     @Override
-    public TestResult runTest(int numerOfObjects) {
+    public TestResult runTest(int numberOfObjects) {
         long time = 0;
 
         HashMap<String, ItemConstant> attributes = new HashMap<>();
@@ -15,7 +15,7 @@ public class MapTest extends AbstractTest {
         }
 
         Random rand = new Random();
-        for (int i = 0; i < numerOfObjects; i++) {
+        for (int i = 0; i < numberOfObjects; i++) {
             String itemName = items[rand.nextInt(items.length)].toString();
             List<ItemConstant> itemList = new ArrayList<>();
 
