@@ -9,12 +9,13 @@ public class EnumTest extends AbstractTest {
     public TestResult runTest(int numberOfObjects) {
         long time = 0;
 
+        Item[] items = Item.values();
         Random rand = new Random();
         for (int i = 0; i < numberOfObjects; i++) {
             Item itemEnum = items[rand.nextInt(items.length)];
             List<ItemConstant> itemList = new ArrayList<>();
 
-            start = System.currentTimeMillis();
+            long start = System.currentTimeMillis();
 
             Item item = itemEnum;
             int a = item.getWeight();
@@ -22,7 +23,7 @@ public class EnumTest extends AbstractTest {
             boolean c = item.isUsedForCrafting();
             itemList.add(new ItemConstant(a, b, c));
 
-            end = System.currentTimeMillis();
+            long end = System.currentTimeMillis();
 
             time += end - start;
         }

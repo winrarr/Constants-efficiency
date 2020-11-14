@@ -28,7 +28,7 @@ public class ClassTest extends AbstractTest {
             AbstractItem itemClass = items.get(rand.nextInt(items.size())).get();
             List<ItemConstant> itemList = new ArrayList<>();
 
-            start = System.currentTimeMillis();
+            long start = System.currentTimeMillis();
 
             AbstractItem item = itemClass;
             int a = item.getWeight();
@@ -36,7 +36,7 @@ public class ClassTest extends AbstractTest {
             boolean c = item.isUsedForCrafting();
             itemList.add(new ItemConstant(a, b, c));
 
-            end = System.currentTimeMillis();
+            long end = System.currentTimeMillis();
 
             time += end - start;
         }

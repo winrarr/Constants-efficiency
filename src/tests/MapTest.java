@@ -12,6 +12,8 @@ public class MapTest extends AbstractTest {
 
         HashMap<String, ItemConstant> attributes = new HashMap<>();
 
+        Item[] items = Item.values();
+
         for (Item item : items) {
             attributes.put(item.toString(),
                     new ItemConstant(item.getWeight(), item.isDroppable(), item.isUsedForCrafting()));
@@ -22,7 +24,7 @@ public class MapTest extends AbstractTest {
             String itemName = items[rand.nextInt(items.length)].toString();
             List<ItemConstant> itemList = new ArrayList<>();
 
-            start = System.currentTimeMillis();
+            long start = System.currentTimeMillis();
 
             String item = itemName;
             int a = attributes.get(item).getWeight();
@@ -30,7 +32,7 @@ public class MapTest extends AbstractTest {
             boolean c = attributes.get(item).isUsedForCrafting();
             itemList.add(new ItemConstant(a, b, c));
 
-            end = System.currentTimeMillis();
+            long end = System.currentTimeMillis();
 
             time += end - start;
         }
