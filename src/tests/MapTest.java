@@ -23,13 +23,15 @@ public class MapTest extends AbstractTest {
 
         time += end - start;
 
+        Item[] items = Item.values();
+        Random rand = new Random();
         for (int i = 0; i < numerOfObjects; i++) {
-            Item[] items = Item.values();
-            String item = items[new Random().nextInt(items.length)].toString().toLowerCase();
+            String itemName = items[rand.nextInt(items.length)].toString().toLowerCase();
             List<ItemConstant> itemList = new ArrayList<>();
 
             start = System.currentTimeMillis();
 
+            String item = itemName;
             int a = attributes.get(item).getWeight();
             boolean b = attributes.get(item).isDroppable();
             boolean c = attributes.get(item).isUsedForCrafting();

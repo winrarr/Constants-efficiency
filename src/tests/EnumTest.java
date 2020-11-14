@@ -9,13 +9,15 @@ public class EnumTest extends AbstractTest {
     public TestResult runTest(int numerOfObjects) {
         long time = 0;
 
+        Random rand = new Random();
+        Item[] items = Item.values();
         for (int i = 0; i < numerOfObjects; i++) {
-            Item[] items = Item.values();
-            Item item = items[new Random().nextInt(items.length)];
+            int index = rand.nextInt(items.length);
             List<ItemConstant> itemList = new ArrayList<>();
 
             start = System.currentTimeMillis();
 
+            Item item = items[index];
             int a = item.getWeight();
             boolean b = item.isDroppable();
             boolean c = item.isUsedForCrafting();

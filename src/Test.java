@@ -23,6 +23,6 @@ public class Test {
             ramTotal += result.getRam();
         }
 
-        return new TestResult(testName, timeTotal, ramTotal);
+        return new TestResult(testName, timeTotal / tests, ramTotal / tests);
     }
 }
