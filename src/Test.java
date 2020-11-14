@@ -4,6 +4,7 @@ public class Test {
     private long start, end;
     private final int tests = 100;
     private final int n = 800000;
+    private Item[] items = Item.values();
 
     public void run() {
         long enumTimeTotal = 0;
@@ -33,7 +34,6 @@ public class Test {
         long time = 0;
 
         for (int i = 0; i < n; i++) {
-            Item[] items = Item.values();
             int index = new Random().nextInt(items.length);
             List<ItemConstant> itemList = new ArrayList<>();
 
@@ -72,7 +72,6 @@ public class Test {
         time += end - start;
 
         for (int i = 0; i < n; i++) {
-            Item[] items = Item.values();
             String itemName = items[new Random().nextInt(items.length)].toString().toLowerCase();
             List<ItemConstant> itemList = new ArrayList<>();
 
