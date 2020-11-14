@@ -12,12 +12,12 @@ public class EnumTest extends AbstractTest {
         Random rand = new Random();
         Item[] items = Item.values();
         for (int i = 0; i < numerOfObjects; i++) {
-            int index = rand.nextInt(items.length);
+            Item itemEnum = items[rand.nextInt(items.length)];
             List<ItemConstant> itemList = new ArrayList<>();
 
             start = System.currentTimeMillis();
 
-            Item item = items[index];
+            Item item = itemEnum;
             int a = item.getWeight();
             boolean b = item.isDroppable();
             boolean c = item.isUsedForCrafting();
