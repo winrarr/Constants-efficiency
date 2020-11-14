@@ -1,6 +1,9 @@
 package tests;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
 
 public class MapTest extends AbstractTest {
     @Override

@@ -4,7 +4,7 @@ public enum Item {
     FEATHER(0),
     GOLD(1, true),
     METAL(1),
-    SILVER(1, false),
+    SILVER(1),
     STONE(2),
     SWORD(5, true),
     WOOD(1, true);

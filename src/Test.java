@@ -1,16 +1,13 @@
 import tests.*;
 
-import java.util.*;
-import java.util.function.Supplier;
-
 public class Test {
-    private long start, end;
     private final int tests = 100;
     private final int n = 800000;
 
     public void run() {
         testNTimes("Enum", new EnumTest()).showResult();
         testNTimes("Map", new MapTest()).showResult();
+        testNTimes("Class", new ClassTest()).showResult();
     }
 
     private TestResult testNTimes(String testName, AbstractTest test) {
