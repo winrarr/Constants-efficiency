@@ -7,23 +7,13 @@ public class MapTest extends AbstractTest {
     public TestResult runTest(int numerOfObjects) {
         long time = 0;
 
-        start = System.currentTimeMillis();
+        HashMap<String, ItemConstant> attributes = new HashMap<>();
 
-        Map<String, ItemConstant> attributes = new HashMap<>();
+        for (Item item : items) {
+            attributes.put(item.toString(),
+                    new ItemConstant(item.getWeight(), item.isDroppable(), item.isUsedForCrafting()));
+        }
 
-        attributes.put("FEATHER", new ItemConstant(0));
-        attributes.put("GOLD", new ItemConstant(1, true));
-        attributes.put("METAL", new ItemConstant(1));
-        attributes.put("SILVER", new ItemConstant(1, false));
-        attributes.put("STONE", new ItemConstant(2));
-        attributes.put("SWORD", new ItemConstant(5, true));
-        attributes.put("WOOD", new ItemConstant(1, true));
-
-        end = System.currentTimeMillis();
-
-        time += end - start;
-
-        Item[] items = Item.values();
         Random rand = new Random();
         for (int i = 0; i < numerOfObjects; i++) {
             String itemName = items[rand.nextInt(items.length)].toString();
