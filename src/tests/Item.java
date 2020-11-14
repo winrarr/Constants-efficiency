@@ -1,3 +1,5 @@
+package tests;
+
 public enum Item {
     FEATHER(0),
     GOLD(1, true),

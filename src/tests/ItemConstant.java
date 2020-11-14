@@ -1,3 +1,5 @@
+package tests;
+
 public class ItemConstant {
     private final int weight;
     private final boolean droppable;

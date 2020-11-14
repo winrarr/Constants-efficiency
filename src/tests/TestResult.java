@@ -1,3 +1,5 @@
+package tests;
+
 public class TestResult {
     private final String testName;
     private final long time;
